@@ -3,7 +3,8 @@ import 'package:dio/dio.dart';
 import '../models/user_model/user.dart';
 
 class WebService {
-  static const String url = "http://localhost:3000";
+  //static const String url = "http://localhost:3000";
+  static const String url = "http://192.168.251.205:3000";
   static const String userid = "1";
 
   static Future<List<User>?> getContactList() async {

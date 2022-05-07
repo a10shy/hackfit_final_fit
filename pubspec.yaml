@@ -35,6 +35,8 @@ dependencies:
   http: ^0.13.4
   json_annotation: ^4.5.0
   percent_indicator: ^4.0.1
+  agora_rtc_engine: ^5.1.0
+  permission_handler: ^9.2.0
 
 
 

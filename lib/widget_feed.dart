@@ -8,7 +8,8 @@ class FeedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _postsListView(),
+      body: SafeArea(child: _postsListView()),
+      //)
     );
   }
 

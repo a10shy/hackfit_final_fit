@@ -1,6 +1,7 @@
 import 'package:fitify_flutter/core/friend_list.dart';
 import 'package:fitify_flutter/profile/MyHomePageBody.dart';
 import 'package:fitify_flutter/services/web_services.dart';
+import 'package:fitify_flutter/video_caller/video_caller.dart';
 import 'package:fitify_flutter/widget_feed.dart';
 import 'package:fitify_flutter/connect_with_new.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,6 @@ void main() {
 class MyApp extends StatelessWidget {
   static const title = 'Fitify';
 
-  @immutable
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         home: const ScreenHomePage(),
         routes: {
           '/connect': (context) => const ScreenConnect(),
-          // '/videocall': (context) => IndexPage(),
+          '/videocall': (context) => VideoApp(),
           '/profile': (context) => MyHomePage(),
         },
       ),

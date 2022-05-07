@@ -41,7 +41,9 @@ class _ScreenConnectState extends State<ScreenConnect> {
                 String response = await WebService.getOnline();
                 // Navigator.pushNamed(context, '/videocall');
               },
-              child: const Icon(Icons.add),
+              child: const Icon(
+                Icons.videocam_rounded,
+              ),
             ),
             const SizedBox(
               height: 20,
