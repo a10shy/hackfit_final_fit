@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         home: const ScreenHomePage(),
         routes: {
           '/connect': (context) => const ScreenConnect(),
-          '/videocall': (context) => VideoApp(),
+          '/videocall': (context) => const VideoApp(),
           '/profile': (context) => MyHomePage(),
         },
       ),

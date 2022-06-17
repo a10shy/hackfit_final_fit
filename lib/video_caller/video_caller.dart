@@ -77,15 +77,25 @@ class _VideoAppState extends State<VideoApp> {
       ),
       body: Stack(
         children: [
+          const Text("Recommended Excercises: "),
           Center(
-            child: _remoteVideo(),
+            child: Image.network(
+                'https://www.mdanderson.org/cancerwise/2020/12/5-weight-training-exercises-to-make-your-life-easier-during-covid-19/_jcr_content/blog/adaptiveimage.resize.702.404.jpg'),
           ),
           Align(
             alignment: Alignment.topLeft,
-            child: Container(
+            child: SizedBox(
               width: 100,
               height: 100,
               child: Center(child: _renderLocalPreview()),
+            ),
+          ),
+          Align(
+            alignment: Alignment.topRight,
+            child: SizedBox(
+              width: 100,
+              height: 100,
+              child: Center(child: _remoteVideo()),
             ),
           ),
         ],
@@ -95,9 +105,9 @@ class _VideoAppState extends State<VideoApp> {
 
   Widget _renderLocalPreview() {
     if (localUserJoined) {
-      return RtcLocalView.SurfaceView();
+      return const RtcLocalView.SurfaceView();
     } else {
-      return Text(
+      return const Text(
         'Joining Channel, Please wait.....',
         textAlign: TextAlign.center,
       );
@@ -112,7 +122,7 @@ class _VideoAppState extends State<VideoApp> {
         channelId: "fitify",
       );
     } else {
-      return Text(
+      return const Text(
         'Please wait for remote user to join',
         textAlign: TextAlign.center,
       );
